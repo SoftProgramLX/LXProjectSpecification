@@ -1,0 +1,34 @@
+{
+    "response": {
+        "responseStatus": {
+            "status": 1200,
+            "statusInfo": "返回成功"
+        },
+        "stockList": [
+                      {
+                      "stockCode": "600121",
+                      "stockName": "郑州煤电郑州煤电郑州煤电郑州煤电郑州煤电"
+                      },
+                      {
+                      "stockCode": "600712",
+                      "stockName": "南宁百货南宁百货南宁百货南宁百货南货南宁百货南货南宁百货南货南宁百货南宁百货南宁百货南宁百货南宁百货"
+                      },
+                      {
+                      "stockCode": "300128",
+                      "stockName": "锦富新材锦富新材"
+                      },
+                      {
+                      "stockCode": "zs000120",
+                      "stockName": "380R价值380R价值380R价值380R价值380R价值380R价值"
+                      },
+                      {
+                      "stockCode": "002126",
+                      "stockName": "银轮股份"
+                      },
+                      {
+                      "stockCode": "600612",
+                      "stockName": "老凤祥老凤祥老凤祥老凤祥老凤祥老凤祥老凤祥老凤祥老凤祥老凤祥老凤祥老凤祥"
+                      }
+                      ]
+    }
+}
