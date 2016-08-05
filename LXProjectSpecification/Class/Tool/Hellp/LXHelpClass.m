@@ -11,7 +11,7 @@
 #include <sys/sysctl.h>
 #import <sys/utsname.h>
 
-#define GetLabelNormalHeight(height,font,spaceH) (height + (height - [UIFont systemFontOfSize:font].pointSize)*spaceH)
+#define GetLabelNormalHeight(height,font,spaceH) (height + (height - [UIFont systemFontOfSize:font].pointSize)*(spaceH>0 ? spaceH : 0.3))
 
 @interface LXHelpClass ()
 {
@@ -126,6 +126,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(LXHelpClass);
     return actualSize.height;
 }
 
+/**
+ *@param textStr 富文本的string属性的值
+ *@param maxSize 控件所需最大空间，一般高是最大值，如：CGSizeMake(stockNameLabelW, MAXFLOAT)
+ *@param font 字体大小
+ *@param spaceRH label行距占行高的比例，一般值为0.3
+ */
 + (CGFloat)calculateLabelighWithText:(NSString *)textStr withMaxSize:(CGSize)maxSize withFont:(CGFloat)font withSpaceRH:(CGFloat)spaceRH
 {
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];

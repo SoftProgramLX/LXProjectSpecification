@@ -81,11 +81,11 @@
         LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
         //判断服务器返回“1200”是正常才做业务处理
         if ([resultModel.response.responseStatus.status isEqualToString:@"1200"]) {
-            //这里将stockList模型数组进行转化，得到了数据就将它里面的文本高计算出来，同时就可以计算好cell里元素控件的坐标
+            //这里将stockList模型数组再封装，通过model的数据与cell控件结合算出文本高。
             [self.showDataArr setArray:[self manageViewsFrameWithDatas:resultModel.response.stockList]];
             [self.tableView reloadData];
         } else {
-            //服务器返回错误了，在这里可以做一些提醒处理，或者再发请求
+            //服务器返回错误了，在这里可以做一些提醒处理
         }
     }];
 }
@@ -188,6 +188,7 @@
 }
 
 #pragma mark - Setter and getter
+
 
 @end
 

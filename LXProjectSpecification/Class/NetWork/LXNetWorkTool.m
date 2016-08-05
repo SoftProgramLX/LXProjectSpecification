@@ -15,8 +15,6 @@
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
     mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/csv",@"application/json",@"text/json", @"text/plain", @"text/html", nil];
-//    [mgr.requestSerializer setValue:singleton.deviceToken forHTTPHeaderField:@"websiteid"];
-//    [mgr.requestSerializer setValue:singleton.curentVersion forHTTPHeaderField:@"version"];
     
     [mgr POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObj) {
         if (success) {
