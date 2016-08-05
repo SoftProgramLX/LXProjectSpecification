@@ -115,11 +115,11 @@ json转model
 ```
 LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
 ```
-但是必须先根据responseDic的数据结构定义好在LXStockResult的属性列表，如这样的数据结构：
-![screen1.png](http://upload-images.jianshu.io/upload_images/301102-8c7b8406bdeaa47a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-需创建的model文件如下：
-![screen2.png](http://upload-images.jianshu.io/upload_images/301102-14202d837962f7b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-对应的属性列表如下：
+但是必须先根据responseDic的数据结构定义好在LXStockResult的属性列表，如这样的数据结构：<br>
+![screen1.png](http://upload-images.jianshu.io/upload_images/301102-8c7b8406bdeaa47a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)<br>
+需创建的model文件如下：<br>
+![screen2.png](http://upload-images.jianshu.io/upload_images/301102-14202d837962f7b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)<br>
+对应的属性列表如下：<br>
 ```
 @interface LXStockResult : NSObject
 @property (nonatomic, strong) LXStockResponse *response;
@@ -164,16 +164,18 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
 #pragma mark - Private methods
 #pragma mark - Setter and getter
 ```
-将方法顺序整理，利于快速查找方法，易于后期维护
-展示效果如图：
+<br>
+将方法顺序整理，利于快速查找方法，易于后期维护<br>
+展示效果如图：<br>
 ![screen4.png](http://upload-images.jianshu.io/upload_images/301102-111a829f090094a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 文件结构
 -----------
 
-如下图：
-![screen3.png](http://upload-images.jianshu.io/upload_images/301102-987d149d8f3d2459.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+如下图：<br>
+![screen3.png](http://upload-images.jianshu.io/upload_images/301102-987d149d8f3d2459.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)<br>
 有一个清晰的文件结构，利于理解业务与后期维护。
+
 
 TableView自动布局
 -----------
@@ -239,7 +241,7 @@ TableView自动布局
 复用UITableViewHeaderFooterView
 -----------
 
-若UITableViewHeaderFooterView不采用复用机制，那么每次滑动TableView看见HeaderFooterView时都会掉用下面的代理方法从而不断重复创建
+若UITableViewHeaderFooterView不采用复用机制，那么每次滑动TableView看见HeaderFooterView时都会掉用下面的代理方法从而不断重复创建<br>
 ```
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
