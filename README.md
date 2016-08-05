@@ -225,7 +225,10 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
     return frame.cellHeight;
 }
 ```
-##六.UITableViewHeaderFooterView复用
+
+六.UITableViewHeaderFooterView复用
+-----------
+
 若UITableViewHeaderFooterView不采用复用机制，那么每次滑动TableView看见HeaderFooterView时都会掉用下面的代理方法从而不断重复创建
 ```
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -261,7 +264,10 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
     return self;
 }
 ```
-##七.计算文本内容大小
+
+计算文本内容大小
+-----------
+
 ####1.计算普通文本的高
 ```
 + (CGFloat)calculateLabelighWithText:(NSString *)textStr withMaxSize:(CGSize)maxSize withFont:(CGFloat)font
