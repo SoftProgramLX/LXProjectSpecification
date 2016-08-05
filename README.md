@@ -6,7 +6,7 @@
 * 一.[封装网络请求](#封装网络请求) 
 * 二.[json转model](#json转model) 
 * 三.[方法顺序](#方法顺序) 
-* 四.[四.文件结构](#文件结构) 
+* 四.[文件结构](#文件结构) 
 * 五.[UITableView自动布局](#UITableView自动布局) 
 * 六.[UITableViewHeaderFooterView复用](#UITableViewHeaderFooterView复用) 
 * 七.[计算文本内容大小](#计算文本内容大小) 
@@ -175,7 +175,9 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
 ![screen3.png](http://upload-images.jianshu.io/upload_images/301102-987d149d8f3d2459.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 有一个清晰的文件结构，利于理解业务与后期维护。
 
-##五.UITableView自动布局
+UITableView自动布局
+-----------
+
 ```
 [LXNetWorkTool get:urlStr param:param success:^(NSDictionary *responseDic) {
     LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
