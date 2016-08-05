@@ -265,7 +265,7 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
 }
 ```
 
-计算文本内容大小
+七.计算文本内容大小
 -----------
 
 ####1.计算普通文本的高
