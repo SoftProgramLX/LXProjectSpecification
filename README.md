@@ -7,8 +7,8 @@
 * [二.json转model](#json转model) 
 * [三.方法顺序](#方法顺序) 
 * [四.文件结构](#文件结构) 
-* [五.UITableView自动布局](#UITableView自动布局) 
-* [六.UITableViewHeaderFooterView复用](#UITableViewHeaderFooterView复用) 
+* [五.TableView自动布局](#TableView自动布局) 
+* [六.复用UITableViewHeaderFooterView](#复用UITableViewHeaderFooterView) 
 * [七.计算文本内容大小](#计算文本内容大小) 
 
 封装网络请求
@@ -175,7 +175,7 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
 ![screen3.png](http://upload-images.jianshu.io/upload_images/301102-987d149d8f3d2459.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 有一个清晰的文件结构，利于理解业务与后期维护。
 
-UITableView自动布局
+TableView自动布局
 -----------
 
 ```
@@ -236,7 +236,7 @@ UITableView自动布局
 }
 ```
 
-UITableViewHeaderFooterView复用
+复用UITableViewHeaderFooterView
 -----------
 
 若UITableViewHeaderFooterView不采用复用机制，那么每次滑动TableView看见HeaderFooterView时都会掉用下面的代理方法从而不断重复创建
