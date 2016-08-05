@@ -11,7 +11,9 @@
 * [六.UITableViewHeaderFooterView复用](#六.UITableViewHeaderFooterView复用) 
 * 七.[计算文本内容大小](#计算文本内容大小) 
 
-##一.封装网络请求
+封装网络请求
+-----------
+
 ####1.封装get请求
 ```
 + (void)get:(NSString *)url param:(NSString *)param success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure
@@ -106,7 +108,9 @@ NSLog(@"%@", responseDic);
 }];
 ```
 
-##二.json转model
+json转model
+-----------
+
 获取到网络json数据后，无论多么复杂的数据结构，嵌套多少层，使用mj的一个第三方一句代码将字典转化成model，如下：
 ```
 LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
@@ -144,7 +148,9 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
 
 ```
 
-##三.方法顺序
+方法顺序
+-----------
+
 ```
 #pragma mark - Life cycle
 #pragma mark - Init data
@@ -162,7 +168,9 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
 展示效果如图：
 ![screen4.png](http://upload-images.jianshu.io/upload_images/301102-111a829f090094a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-##四.文件结构
+文件结构
+-----------
+
 如下图：
 ![screen3.png](http://upload-images.jianshu.io/upload_images/301102-987d149d8f3d2459.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 有一个清晰的文件结构，利于理解业务与后期维护。
@@ -226,7 +234,7 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
 }
 ```
 
-六.UITableViewHeaderFooterView复用
+UITableViewHeaderFooterView复用
 -----------
 
 若UITableViewHeaderFooterView不采用复用机制，那么每次滑动TableView看见HeaderFooterView时都会掉用下面的代理方法从而不断重复创建
@@ -265,7 +273,7 @@ LXStockResult *resultModel = [LXStockResult objectWithKeyValues:responseDic];
 }
 ```
 
-七.计算文本内容大小
+计算文本内容大小
 -----------
 
 ####1.计算普通文本的高
