@@ -14,89 +14,12 @@
 封装网络请求
 -----------
 
-####1.封装get请求
-```
-+ (void)get:(NSString *)url param:(NSString *)param success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure
-
-{
-
-AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-
-mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
-
-[mgr GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObj) {
-
-if (success) {
-
-NSError *error;
-
-NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:responseObj options:NSJSONReadingMutableLeaves error:&error];
-
-if(error) {
-
-Log(@"json解析失败：%@",error);
-
-}
-
-success(responseDic);
-
-}
-
-} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-
-if (failure) {
-
-failure(error);
-
-}
-
-}];
-
-}
-```
-
-  2.封装post请求
-```
-+ (void)post:(NSString *)url param:(NSString *)param success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure
-
-{
-
-AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-
-mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
-
-mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/csv",@"application/json",@"text/json", @"text/plain", @"text/html", nil];
-
-[mgr POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObj) {
-
-if (success) {
-
-NSError *err;
-
-NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:responseObj options:NSJSONReadingMutableLeaves error:&err];
-
-if(err) {
-
-Log(@"json解析失败：%@",err);
-
-}
-
-success(responseDic);
-
-}
-
-} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-
-if (failure) {
-
-failure(error);
-
-}
-
-}];
-
-}
-```
+####1.封装get请求<br>
+![code1.png](http://upload-images.jianshu.io/upload_images/301102-28f0a5d66775763b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<br>
+  2.封装post请求<br>
+![code2.png](http://upload-images.jianshu.io/upload_images/301102-d0c40b5dc75c3b52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<br>
 3.使用方法
 ```
 [LXNetWorkTool get:urlStr param:param success:^(NSDictionary *responseDic) {
