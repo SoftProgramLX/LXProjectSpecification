@@ -7,11 +7,7 @@
 //
 
 #import "LXBaseCell.h"
-#import "LXTestStockFrame.h"
 
 @interface LXTestTableCell : LXBaseCell
-
-+ (instancetype)cellWithTableView:(UITableView *)tableView;
-- (void)configurationCell:(LXTestStockFrame *)frameModel;
 
 @end

@@ -12,4 +12,7 @@
 
 @property (nonatomic, assign) NSInteger row;
 
++ (instancetype)cellWithTableView:(UITableView *)tableView;
+- (void)configurationCell:(id)object;
+
 @end

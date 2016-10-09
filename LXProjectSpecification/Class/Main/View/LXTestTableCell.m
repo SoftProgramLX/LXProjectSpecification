@@ -7,6 +7,7 @@
 //
 
 #import "LXTestTableCell.h"
+#import "LXTestStockFrame.h"
 
 @interface LXTestTableCell ()
 

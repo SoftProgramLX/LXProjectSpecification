@@ -187,7 +187,7 @@
     NSMutableArray *tempArr = [NSMutableArray array];
     for (LXStockList *listModel in datas) {
         LXTestStockFrame *frame = [[LXTestStockFrame alloc] init];
-        frame.model = listModel;
+        frame.model = listModel;//通过重写setModel方法计算设置cell内部自定义控件的布局
         [tempArr addObject:frame];
     }
     return tempArr;
