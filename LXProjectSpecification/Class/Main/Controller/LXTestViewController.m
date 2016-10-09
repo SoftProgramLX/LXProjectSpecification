@@ -26,8 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = bgColor;
-    _showDataArr = [NSMutableArray array];
     
+    [self initData];
     [self createUI];
     [self downloadData];
 }
@@ -61,6 +61,12 @@
     
 }
 
+#pragma mark - Init data
+
+- (void)initData
+{
+    _showDataArr = [NSMutableArray array];
+}
 
 #pragma mark - Loading data
 
